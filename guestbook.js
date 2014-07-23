@@ -20,10 +20,10 @@ if (Meteor.isClient) {
         $(e.target).find("[name=message]").val("");   
         $(e.target).find("[name=x]").val("");
         $(e.target).find("[name=y]").val("");
+        $('#contact').modal('toggle');
 
       }
   })
-
 }
 
 if (Meteor.isServer) {
