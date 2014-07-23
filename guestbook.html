@@ -1,0 +1,137 @@
+<head>
+  <title>My guestbook</title>
+</head>
+
+<body>
+	{{> my_nav_bar}}
+    {{> main}}
+</body>
+
+
+
+<template name="my_nav_bar">
+	  <div class = "navbar navbar-inverse navbar-static-top">
+                        <div class = "container">
+                               
+                                <a href = "#" class = "navbar-brand">Tech Site</a>
+                               
+                               <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                                        <span class = "icon-bar"></span>
+                                </button>
+                               
+                                <div class = "collapse navbar-collapse navHeaderCollapse">
+                               
+                                        <ul class = "nav navbar-nav navbar-right">
+                                       
+                          <!--                       <li class = "active"><a href = "#">Home</a></li>
+                                                <li><a href = "#">Blog</a></li>
+                                                <li class = "dropdown">
+                                                       
+                                                        <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
+                                                        <ul class = "dropdown-menu">
+                                                                <li><a href = "#">Twitter</a></li>
+                                                                <li><a href = "#">Facebook</a></li>
+                                                                <li><a href = "#">Google+</a></li>
+                                                                <li><a href = "#">Instagram</a></li>
+                                                        </ul>
+                                               
+                                                </li>
+                                                <li><a href = "#">About</a></li>  -->
+                                                <li><a href = "#contact" data-toggle="modal">New Message</a></li>
+                                		</ul>
+                       
+                        		</div>
+                       
+                		</div>
+     </div>
+
+
+    
+</template>
+
+<template name="main">
+<div class="container">
+<h2>
+	GuestBook
+</h2>
+<table class="table">
+				<thead>
+					<tr>
+						<th>
+							Name
+						</th>				
+						<th>
+							Message
+						</th>
+						<th>
+							X
+						</th>
+						<th>
+							Y
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+				{{#each posts}}
+					<tr>
+					    <td>
+			        		{{name}}
+						</td>
+						<td>
+							{{text}}
+						</td>
+						<td>
+							{{x}}
+						</td>
+						<td>
+							{{y}}
+						</td>
+					</tr>
+				{{/each}}
+				</tbody>
+	</table>
+
+</div>
+
+<div class = "modal fade" id = "contact" role = "dialog">
+    <div class = "modal-dialog">
+        <div class = "modal-content">
+            <div class = "modal-header">
+                <h4>Contact Tech Site</h4>
+            </div>
+            <form >
+				<div class = "modal-body">
+					
+						<div class="form-group">
+						    <label >Name</label>
+						    <input type="text" class="form-control" name ="username">
+						</div>
+						<div class="form-group">
+						    <label >Message</label>
+						    <input type="text" class="form-control" name ="message">
+						 </div>
+						 <div class="form-group">
+						    <label for="exampleInputEmail1">X</label>
+						    <input type="text" name ="x" class="form-control"> 
+						 </div>
+						 <div class="form-group">
+						    <label for="exampleInputEmail1">Y</label>
+						    <input type="text" name ="y" class="form-control"> 
+						 </div>
+					
+				</div>
+       
+			    <div class = "modal-footer">
+			       <!--  <a class = "btn btn-default" data-dismiss = "modal">Close</a>    
+			        <a class = "btn btn-primary" data-dismiss = "modal">Close</a> -->
+			        <input type="submit" value="Create" class="btn btn-default" data-dismiss = "modal">
+				</div>
+			</form>
+    	</div>
+    </div>
+</div>
+       
+
+</template>
