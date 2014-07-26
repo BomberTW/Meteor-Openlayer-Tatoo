@@ -1,0 +1,20 @@
+<head>
+  <title>3dplayer</title>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/openlayers/2.11/OpenLayers.js"></script>
+</head>
+
+<body>
+  {{> openLayerTatoo}}
+
+</body>
+
+<template name="hello">
+  <h1>Hello World!</h1>
+  {{greeting}}
+  <input type="button" value="Click" />
+</template>
+
+<template name="openLayerTatoo">
+    <div id="selected_marker"></div>
+    <div id="map" style="width:500px;height:500px;"></div>  
+</template>
