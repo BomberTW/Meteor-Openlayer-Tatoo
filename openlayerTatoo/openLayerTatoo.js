@@ -1,9 +1,9 @@
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
+  Template.openLayerTatoo.greeting = function () {
     return "Welcome to 3dplayer.";
   };
 
-  Template.hello.events({
+  Template.openLayerTatoo.events({
     'click input': function () {
       // template data, if any, is available in 'this'
       if (typeof console !== 'undefined')
