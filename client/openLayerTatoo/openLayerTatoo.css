@@ -1,1 +1,8 @@
 /* CSS declarations go here */
+
+#map{
+	position: absolute;
+	width:500px;
+	height:500px;
+	right: 500px;
+}

@@ -4,8 +4,8 @@
 
 <body>
 	{{> my_nav_bar}}
-   
-    
+
+
     <div class="container">
 		<div class="row clearfix">
 			<div class="col-md-6 column">
@@ -19,27 +19,27 @@
 </body>
 
 
+</body>
 
 <template name="my_nav_bar">
 	  <div class = "navbar navbar-inverse navbar-static-top">
                         <div class = "container">
-                               
+
                                 <a href = "#" class = "navbar-brand">Tech Site</a>
-                               
                                <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
                                         <span class = "icon-bar"></span>
                                         <span class = "icon-bar"></span>
                                         <span class = "icon-bar"></span>
                                 </button>
-                               
+
                                 <div class = "collapse navbar-collapse navHeaderCollapse">
-                               
+
                                         <ul class = "nav navbar-nav navbar-right">
-                                       
+
                           <!--                       <li class = "active"><a href = "#">Home</a></li>
                                                 <li><a href = "#">Blog</a></li>
                                                 <li class = "dropdown">
-                                                       
+
                                                         <a href = "#" class = "dropdown-toggle" data-toggle = "dropdown">Social Media <b class = "caret"></b></a>
                                                         <ul class = "dropdown-menu">
                                                                 <li><a href = "#">Twitter</a></li>
@@ -47,22 +47,25 @@
                                                                 <li><a href = "#">Google+</a></li>
                                                                 <li><a href = "#">Instagram</a></li>
                                                         </ul>
-                                               
+
                                                 </li>
                                                 <li><a href = "#">About</a></li>  -->
                                                 <li><a href = "#contact" data-toggle="modal">New Message</a></li>
                                 		</ul>
-                       
+
                         		</div>
-                       
+
                 		</div>
      </div>
 
 
-    
+
 </template>
 
 <template name="main">
+
+{{> openLayerTatoo}}
+
 <div class="container">
 <h2>
 	Leg Hair Soldier
@@ -72,7 +75,7 @@
 					<tr>
 						<th>
 							Name
-						</th>				
+						</th>
 						<th>
 							Message
 						</th>
@@ -114,7 +117,7 @@
             </div>
             <form >
 				<div class = "modal-body">
-					
+
 						<div class="form-group">
 						    <label >Name</label>
 						    <input type="text" class="form-control" name ="username">
@@ -125,17 +128,17 @@
 						 </div>
 						 <div class="form-group">
 						    <label for="exampleInputEmail1">X</label>
-						    <input type="text" name ="x" class="form-control"> 
+						    <input type="text" name ="x" class="form-control">
 						 </div>
 						 <div class="form-group">
 						    <label for="exampleInputEmail1">Y</label>
-						    <input type="text" name ="y" class="form-control"> 
+						    <input type="text" name ="y" class="form-control">
 						 </div>
-					
+
 				</div>
-       
+
 			    <div class = "modal-footer">
-			       <!--  <a class = "btn btn-default" data-dismiss = "modal">Close</a>    
+			       <!--  <a class = "btn btn-default" data-dismiss = "modal">Close</a>
 			        <a class = "btn btn-primary" data-dismiss = "modal">Close</a> -->
 			        <input type="submit" value="Create" class="btn btn-primary ">
 			        <button type="close" value="Create" class="btn btn-default" data-dismiss = "modal">Close</button>
@@ -144,6 +147,6 @@
     	</div>
     </div>
 </div>
-       
+
 
 </template>
